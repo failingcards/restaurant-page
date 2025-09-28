@@ -1,5 +1,10 @@
 function createHomePage() {
     const content = document.getElementById("content");
+    
+    content.className = "page-transition";
+
+    const heroSection = document.createElement("div");
+    heroSection.className = "hero-section";
 
     const headline = document.createElement("h1");
     headline.textContent = "Welcome to Bella Vista Restaurant";
@@ -18,10 +23,12 @@ function createHomePage() {
     const paragraph2 = document.createElement("p");
     paragraph2.textContent = "Join us for an unforgettable dining experience where tradition meets innovation.";
 
-    content.appendChild(headline);
-    content.appendChild(image);
-    content.appendChild(paragraph1);
-    content.appendChild(paragraph2);
+    heroSection.appendChild(headline);
+    heroSection.appendChild(image);
+    heroSection.appendChild(paragraph1);
+    heroSection.appendChild(paragraph2);
+    
+    content.appendChild(heroSection);
 }
 
 export default createHomePage;
